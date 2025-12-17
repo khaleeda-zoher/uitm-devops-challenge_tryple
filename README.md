@@ -47,8 +47,8 @@ A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Chall
 
 ### **Core Development Modules**
 
-| <p align="center">Module<p/> | <p align="center">Description<p/> | 
-| :--- | :--- | :--- | :--- |
+| <p align="center">Module</p> | <p align="center">Description</p> | 
+| :--- | :--- | 
 | **1. Secure Login & MFA** | <br/>MFA/OTP-based login was created with role-based access control | Access was restricted to verified identities during critical actions.<br/> | 
 | **2. Secure API Gateway** | <br/>HTTPS, JWT tokens, and access validation were applied. | Secure communication was maintained according to OWASP M1-M3 and M5-M6.<br/> | 
 | **3. Digital Agreement** | <br/>The Rentverse module was reused with added secure signature validation. | Data integrity and workflow validation were enforced through access permissions.<br/> | 
