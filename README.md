@@ -10,11 +10,12 @@ The system was designed to foster a DevSecOps mindset, with a specific focus on 
 
 ## 📌 Quick Metadata
 
-Organizer: UiTM Cawangan Perak, Kampus Tapah. <br/>
+| <p align="center">Category</p> | <p align="center">Details</p> |
+| :--- | :--- |
+| **Organizer** | [cite_start]UiTM Cawangan Perak, Kampus Tapah [cite: 4] |
+| **Industry Partner** | Metairflow R&D Sdn. [cite_start]Bhd. [cite: 5, 21] |
+| **Theme** | [cite_start]"Mobile Defense and Intelligence: Build Fast, Defend Smarter" [cite: 2, 3] |
 
-Industry Partner: Metairflow R&D Sdn. Bhd. <br/>
-
-Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 
 ## 👥 Our group members:
 
@@ -27,7 +28,7 @@ Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 
 ## 🐞 Members' Tasks
 
-| Member | Tasks |
+| <p align="center">Member</p> | <p align="center">Tasks</p> |
 | :--- | :--- |
 | **Aisyah** | **Flutter Integration Lead**: Login and MFA implementation, tenant property browsing, rent flow development, and API integration. |
 | **Arief** | **Owner Features**: Property upload and editing, listing management, role-based access control, and secure backend API development. |
