@@ -8,7 +8,7 @@ The system was designed to foster a DevSecOps mindset, with a specific focus on 
 </div>
 
 
-📌 Quick Metadata
+## 📌 Quick Metadata
 
 Organizer: UiTM Cawangan Perak, Kampus Tapah. <br/>
 
@@ -16,7 +16,7 @@ Industry Partner: Metairflow R&D Sdn. Bhd. <br/>
 
 Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 
-👥 Our group members:
+## 👥 Our group members:
 
 1. Khaleeda binti Mohamad Zoher <br/>
 
@@ -25,7 +25,7 @@ Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 3. Nur Arief Danial bin Zorkarnain <br/>
 
 
-🐞 Members' Tasks
+## 🐞 Members' Tasks
 
 | Member | Tasks |
 | :--- | :--- |
