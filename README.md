@@ -25,6 +25,15 @@ Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 3. Nur Arief Danial bin Zorkarnain <br/>
 
 
+🐞 Members' Tasks
+
+| Member | Tasks |
+| :--- | :--- |
+| **Aisyah** | [cite_start]**Flutter Integration Lead**: Login and MFA implementation[cite: 62], tenant property browsing, rent flow development, and API integration. |
+| **Arief** | [cite_start]**Owner Features**: Property upload and editing, listing management, role-based access control[cite: 56], and secure backend API development. |
+| **Khaleeda** | [cite_start]**Admin & Alerts**: Anomaly detection [cite: 46, 47][cite_start], system logs [cite: 76, 80][cite_start], activity dashboards [cite: 77][cite_start], AI-based monitoring[cite: 10, 100], and payment flow integration. |
+
+
 ## 🧪 Project Overview
 <div align="justify">
 A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were integrated into the Rentverse architecture to simulate real-world defensive environments. Front-end usability, back-end integrity, and AI-driven defense mechanisms were blended to create a resilient system. <br/>
