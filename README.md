@@ -1,30 +1,44 @@
 # 📦 UiTM Mobile SecOps Challenge - Tryple Team
+<div align="justify">
+This mobile prototype was developed as a requirement for the UiTM Mobile SecOps 21 Days Challenge. A secure, intelligent application was built 
 
-This mobile prototype was developed as a requirement for the UiTM Mobile SecOps 21 Days Challenge. A secure, intelligent application was built <br/>
-by blending front-end usability with back-end integrity based on the Rentverse architecture. Real-world DevSecOps environments were simulated to <br/>
+by blending front-end usability with back-end integrity based on the Rentverse architecture. Real-world DevSecOps environments were simulated to 
+
 demonstrate secure software engineering across the full stack. <br/>
+</div>
+<div align="justify">
+The system was designed to foster a DevSecOps mindset, with a specific focus on Mobile Defense and Intelligence. Advanced security mechanisms, 
 
-The system was designed to foster a DevSecOps mindset, with a specific focus on Mobile Defense and Intelligence. Advanced security mechanisms, <br/>
-including JWT-based authentication and role-based access control, were integrated to ensure data protection and session integrity. Additionally, <br/>
+including JWT-based authentication and role-based access control, were integrated to ensure data protection and session integrity. Additionally, 
+
 a rule-based Threat Intelligence System was incorporated to detect unusual access patterns and mitigate potential intrusion attempts.<br/>
+</div>
 
 📌 Quick Metadata
 
 Organizer: UiTM Cawangan Perak, Kampus Tapah. <br/>
+
 Industry Partner: Metairflow R&D Sdn. Bhd. <br/>
+
 Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 
 👥 Our group members:
 
 1. Khaleeda binti Mohamad Zoher <br/>
+
 2. Siti Aisyah binti Idris <br/>
+
 3. Nur Arief Danial bin Zorkarnain <br/>
 
 ## 🧪 Project Overview
+<div align="justify">
+A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were 
 
-A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were <br/>
-integrated into the Rentverse architecture to simulate real-world defensive environments. Front-end usability, <br/>
+integrated into the Rentverse architecture to simulate real-world defensive environments. Front-end usability, 
+
 back-end integrity, and AI-driven defense mechanisms were blended to create a resilient system. <br/>
+</div>
+
 
 ## 🔑 Core Modules Implemented
 
@@ -57,6 +71,7 @@ The following logic was implemented within the Node.js and Prisma environment:
 🔗 Log Capture: Every failed login attempt is recorded in the database with a timestamp and the associated user email or phone number.
 
 🔗 Threshold Enforcement: A rule-based threshold is applied; if a specific number of failed attempts is reached within <br/>
+
 a defined window, the activity is flagged as a potential threat.
 
 ## 🌐 Technical Stack
