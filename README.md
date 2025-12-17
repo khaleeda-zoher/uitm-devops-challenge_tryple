@@ -12,9 +12,9 @@ The system was designed to foster a DevSecOps mindset, with a specific focus on 
 
 | <p align="center">Category</p> | <p align="center">Details</p> |
 | :--- | :--- |
-| **Organizer** | [cite_start]UiTM Cawangan Perak, Kampus Tapah [cite: 4] |
+| **Organizer** | UiTM Cawangan Perak, Kampus Tapah |
 | **Industry Partner** | Metairflow R&D Sdn.Bhd. |
-| **Theme** | [cite_start]"Mobile Defense and Intelligence: Build Fast, Defend Smarter" [cite: 2, 3] |
+| **Theme** | "Mobile Defense and Intelligence: Build Fast, Defend Smarter" |
 
 
 ## 👥 Our group members:
