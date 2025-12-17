@@ -38,13 +38,13 @@ back-end integrity, and AI-driven defense mechanisms were blended to create a re
 
 A lightweight, rule-based intelligence module was developed to identify and mitigate potential security threats.
 
-> Anomaly Detection: Unusual access patterns and repeated failed login attempts are actively detected by the backend system.
+* Anomaly Detection: Unusual access patterns and repeated failed login attempts are actively detected by the backend system.
 
-> Incident Identification: Suspicious usage patterns are identified to prevent unauthorized access or brute-force intrusion attempts.
+* Incident Identification: Suspicious usage patterns are identified to prevent unauthorized access or brute-force intrusion attempts.
 
-> Real-Time Monitoring: All failed authentication events are logged to ensure system accountability and threat visualization.
+* Real-Time Monitoring: All failed authentication events are logged to ensure system accountability and threat visualization.
 
-> Automated Alerting: Suspicious activities are flagged within the system to provide visibility into potential security risks.
+* Automated Alerting: Suspicious activities are flagged within the system to provide visibility into potential security risks.
 
 ## 📲 Implementation Details (Technical Explanation)
 
