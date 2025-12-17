@@ -31,8 +31,7 @@ Theme: "Mobile Defense and Intelligence: Build Fast, Defend Smarter". <br/>
 | :--- | :--- |
 | **Aisyah** | **Flutter Integration Lead**: Login and MFA implementation, tenant property browsing, rent flow development, and API integration. |
 | **Arief** | **Owner Features**: Property upload and editing, listing management, role-based access control, and secure backend API development. |
-| **Khaleeda** | **Admin & Alerts**: Anomaly detection, system logs, activity dashboards, AI-based monitoring, and payment flow integration. 
-</br> |
+| **Khaleeda** | **Admin & Alerts**: Anomaly detection, system logs, activity dashboards, AI-based monitoring, and payment flow integration.  |
 
 
 ## 🧪 Project Overview
