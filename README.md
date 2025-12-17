@@ -19,11 +19,11 @@ The system was designed to foster a DevSecOps mindset, with a specific focus on 
 
 ## 👥 Our group members:
 
-1. Khaleeda binti Mohamad Zoher <br/>
-
-2. Siti Aisyah binti Idris <br/>
-
-3. Nur Arief Danial bin Zorkarnain <br/>
+| <p align="center">Student ID</p> | <p align="center">Name</p> |
+| :--- | :--- |
+| 2024779559 | Khaleeda binti Mohamad Zoher |
+| 2024916815 | Siti Aisyah binti Idris |
+| 2024905789 | Nur Arief Danial bin Zorkarnain |
 
 
 ## 🐞 Members' Tasks
