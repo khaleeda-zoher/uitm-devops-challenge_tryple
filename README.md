@@ -5,23 +5,23 @@ Our group members:
 2. Siti Aisyah binti Idris
 3. Nur Arief Danial bin Zorkarnain
 
-# 🧪 Project Overview
+## 🧪 Project Overview
 
 A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were 
 integrated into the Rentverse architecture to simulate real-world defensive environments. Front-end usability, 
 back-end integrity, and AI-driven defense mechanisms were blended to create a resilient system.
 
-# 🔑 Core Modules Implemented
+## 🔑 Core Modules Implemented
 
-🔗 Secure Authentication: MFA logins were implemented with role-based access control. 
+🔗 ###Secure Authentication###: MFA logins were implemented with role-based access control. 
 
-🔗 Secure API Gateway: Communication was secured using HTTPS and JWT tokens.
+🔗 ###Secure API Gateway###: Communication was secured using HTTPS and JWT tokens.
 
-🔗 Digital Agreement: A mobile module for digital signatures was created with workflow validation.
+🔗 ###Digital Agreement###: A mobile module for digital signatures was created with workflow validation.
 
-🔗 DevSecOps Monitoring: Real-time logging of user activities and failed login attempts was established for threat visualization.
+🔗 ###DevSecOps Monitoring###: Real-time logging of user activities and failed login attempts was established for threat visualization.
 
-# 🛠️ Security Feature
+## 🛠️ Security Feature
 
 🔗 Threat Intelligence System
 
@@ -35,7 +35,7 @@ A lightweight, rule-based intelligence module was developed to identify and miti
 
 > Automated Alerting: Suspicious activities are flagged within the system to provide visibility into potential security risks.
 
-# 📲 Implementation Details (Technical Explanation)
+## 📲 Implementation Details (Technical Explanation)
 
 The following logic was implemented within the Node.js and Prisma environment:
 
@@ -44,7 +44,7 @@ The following logic was implemented within the Node.js and Prisma environment:
 🔗 Threshold Enforcement: A rule-based threshold is applied; if a specific number of failed attempts is reached within 
 a defined window, the activity is flagged as a potential threat.
 
-# 🌐 Technical Stack
+## 🌐 Technical Stack
 
 🔗 Frontend: Flutter (Mobile Prototype).
 
@@ -53,4 +53,6 @@ a defined window, the activity is flagged as a potential threat.
 🔗 Database: pgAdmin was used for database management and table visualization.
 
 🔗 Security: JWT, Bcrypt hashing, and MFA/OTP verification.
+
+
 
