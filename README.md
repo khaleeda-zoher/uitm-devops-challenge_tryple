@@ -45,7 +45,6 @@ A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Chall
 
 <div align="center">
 
-### **Core Development Modules**
 
 | <p align="center">Module</p> | <p align="center">Description</p> | 
 | :--- | :--- | 
