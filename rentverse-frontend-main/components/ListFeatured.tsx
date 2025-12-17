@@ -15,6 +15,10 @@ function ListFeatured() {
     loadProperties({ limit: 8, page: 1 })
   }, [loadProperties])
 
+  useEffect(() => {
+  console.log('Properties updated:', properties)
+}, [properties])
+
   if (isLoading) {
     return (
       <div className="py-16 px-4 md:px-16">
@@ -44,6 +48,12 @@ function ListFeatured() {
           A selection of verified properties in the most sought-after locations
         </p>
       </div>
+
+      {!isLoading && properties.length === 0 && (
+        <p className="text-teal-700">
+         No properties available at the moment.
+       </p>
+      )}
 
       <Swiper
         modules={[FreeMode]}

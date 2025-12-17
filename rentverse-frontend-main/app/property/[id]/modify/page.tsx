@@ -72,105 +72,95 @@ function ModifyPropertyPage() {
     status: 'APPROVED'
   })
 
-  // Fetch property data and pre-fill form
   useEffect(() => {
-    const fetchProperty = async () => {
-      if (!propertyId || propertyId === 'undefined' || propertyId === 'null') {
-        setError('Property ID not found in URL')
+  const fetchProperty = async () => {
+    if (!propertyId || propertyId === 'undefined' || propertyId === 'null') {
+      setError('Property ID not found in URL')
+      setIsLoading(false)
+      return
+    }
+
+    if (!isLoggedIn) {
+      setIsLoading(false)
+      return
+    }
+
+    if (!user) {
+      console.log('[AUTH] User data not yet loaded, waiting...')
+      setIsLoading(false)
+      return
+    }
+
+    try {
+      console.log('[PROPERTY] Fetching property with ID:', propertyId)
+      const token = localStorage.getItem('authToken')
+      if (!token) {
+        setError('Authentication token not found')
         setIsLoading(false)
         return
       }
 
-      // Don't redirect immediately - just return if not logged in
-      if (!isLoggedIn) {
-        setIsLoading(false)
-        return
-      }
-
-      // Wait for user data to load before proceeding
-      if (!user) {
-        console.log('[AUTH] User data not yet loaded, waiting...')
-        setIsLoading(false)
-        return
-      }
-
-      try {
-        console.log('[PROPERTY] Fetching property with ID:', propertyId)
-        const token = localStorage.getItem('authToken')
-        if (!token) {
-          setError('Authentication token not found')
-          setIsLoading(false)
-          return
-        }
-
-        const response = await fetch(`https://rentverse-be.jokoyuliyanto.my.id/api/properties/${propertyId}`, {
+      const response = await fetch(
+        `http://localhost:8000/api/properties/${propertyId}`,
+        {
           method: 'GET',
           headers: {
             'accept': 'application/json',
             'Authorization': `Bearer ${token}`,
           },
-        })
-
-        if (!response.ok) {
-          throw new Error(`Failed to fetch property: ${response.status}`)
         }
+      )
 
-        const data: PropertyResponse = await response.json()
-        
-        if (data.success && data.data.property) {
-          const propertyData = data.data.property
-          console.log('[PROPERTY] Successfully loaded property:', propertyData)
-          
-          // Check if the current user is the owner of this property
-          if (user && propertyData.ownerId !== user.id) {
-            console.log('[AUTH] User is not the owner of this property:', {
-              currentUserId: user.id,
-              propertyOwnerId: propertyData.ownerId
-            })
-            setIsUnauthorized(true)
-            setError('You are not authorized to modify this property. Only the property owner can make changes.')
-            return
-          }
-          
-          setProperty(propertyData)
-          
-          // Pre-fill form data with fetched property data - ensure all fields are properly set
-          const newFormData = {
-            title: propertyData.title || '',
-            description: propertyData.description || '',
-            propertyType: propertyData.propertyType?.name || '',
-            price: propertyData.price?.toString() || '',
-            furnished: Boolean(propertyData.furnished),
-            isAvailable: propertyData.isAvailable ?? true,
-            status: propertyData.status || 'APPROVED'
-          }
-          
-          setFormData(newFormData)
-          
-          console.log('[PROPERTY] Form pre-filled with:', newFormData)
-          console.log('[PROPERTY] Original property data:', {
-            title: propertyData.title,
-            description: propertyData.description,
-            propertyType: propertyData.propertyType,
-            price: propertyData.price,
-            furnished: propertyData.furnished,
-            isAvailable: propertyData.isAvailable,
-            status: propertyData.status
-          })
-        } else {
-          setError('Failed to load property')
-        }
-      } catch (err) {
-        console.error('Error fetching property:', err)
-        setError(err instanceof Error ? err.message : 'Failed to load property')
-      } finally {
+      if (response.status === 404) {
+        setError('Property not found')
         setIsLoading(false)
+        return
       }
-    }
 
-    console.log('[EFFECT] useEffect triggered, propertyId:', propertyId, 'isLoggedIn:', isLoggedIn, 'user:', user)
-    fetchProperty()
-  }, [propertyId, isLoggedIn, user])
+      if (!response.ok) {
+        throw new Error(`Failed to fetch property: ${response.status}`)
+      }
+
+      const data: PropertyResponse = await response.json()
+
+      if (!data.success || !data.data.property) {
+        setError('Property data is missing')
+        setIsLoading(false)
+        return
+      }
+
+      const propertyData = data.data.property
+
+      if (user.id !== propertyData.ownerId) {
+        setIsUnauthorized(true)
+        setError('You are not authorized to modify this property')
+        setIsLoading(false)
+        return
+      }
+
+      setProperty(propertyData)
+
+      // Pre-fill form data
+      setFormData({
+        title: propertyData.title || '',
+        description: propertyData.description || '',
+        propertyType: propertyData.propertyType?.name || '',
+        price: propertyData.price?.toString() || '',
+        furnished: Boolean(propertyData.furnished),
+        isAvailable: propertyData.isAvailable ?? true,
+        status: propertyData.status || 'APPROVED',
+      })
+
+      setIsLoading(false)
+    } catch (err) {
+      console.error('Error fetching property:', err)
+      setError(err instanceof Error ? err.message : 'Failed to load property')
+      setIsLoading(false)
+    }
+  }
+
+  fetchProperty()
+}, [propertyId, isLoggedIn, user])
 
   const handleBack = () => {
     router.back()
@@ -223,7 +213,7 @@ function ModifyPropertyPage() {
         return
       }
 
-      const response = await fetch(`https://rentverse-be.jokoyuliyanto.my.id/api/properties/${propertyId}`, {
+      const response = await fetch(`http://localhost:8000/api/properties/${propertyId}`, {
         method: 'PUT',
         headers: {
           'accept': 'application/json',
@@ -279,7 +269,7 @@ function ModifyPropertyPage() {
         return
       }
 
-      const response = await fetch(`https://rentverse-be.jokoyuliyanto.my.id/api/properties/${propertyId}`, {
+      const response = await fetch(`http://localhost:8000/api/properties/${propertyId}`, {
         method: 'DELETE',
         headers: {
           'accept': 'application/json',

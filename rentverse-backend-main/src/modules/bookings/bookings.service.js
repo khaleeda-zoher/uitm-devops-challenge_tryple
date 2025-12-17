@@ -456,7 +456,7 @@ class BookingsService {
       );
       const pdfResult =
         await pdfGenerationService.generateAndUploadRentalAgreementPDF(
-          bookingId
+          booking.id
         );
 
       console.log('✅ Rental agreement PDF generated successfully');
@@ -622,9 +622,17 @@ class BookingsService {
    * @param {string} userId - For access control
    * @returns {Promise<Object>}
    */
+
+  
   async getBookingById(bookingId, userId) {
+    console.log('getBookingById params:', {
+    bookingId,
+    userId,
+    });
     const booking = await prisma.lease.findUnique({
-      where: { id: bookingId },
+    where: {
+      id: bookingId, 
+      },
       include: {
         property: {
           include: {
@@ -666,6 +674,10 @@ class BookingsService {
     if (booking.tenantId !== userId && booking.landlordId !== userId) {
       throw new Error('Access denied: You can only view your own bookings');
     }
+
+    if (!bookingId) {
+  throw new Error('bookingId is required');
+  }
 
     return booking;
   }
@@ -710,9 +722,11 @@ class BookingsService {
    * @returns {Promise<Object>}
    */
   async getRentalAgreementPDF(bookingId, userId) {
-    // First check if user has access to this booking
+    // bookingId === leaseId
+    const leaseId = bookingId;  
     const booking = await this.getBookingById(bookingId, userId);
 
+    // First check if user has access to this booking
     if (!booking) {
       throw new Error('Booking not found or access denied');
     }
@@ -726,13 +740,13 @@ class BookingsService {
     // Get rental agreement PDF
     try {
       const pdfResult =
-        await pdfGenerationService.getRentalAgreementPDF(bookingId);
+        await pdfGenerationService.getRentalAgreementPDF(leaseId);
 
       return {
         success: true,
         message: 'Rental agreement PDF retrieved successfully',
         data: {
-          bookingId: bookingId,
+          bookingId: leaseId,
           status: booking.status,
           property: {
             id: booking.property.id,
@@ -751,16 +765,17 @@ class BookingsService {
       // If PDF doesn't exist yet, try to generate it
       if (error.message.includes('not found')) {
         console.log('📄 PDF not found, generating rental agreement...');
+
         const pdfResult =
           await pdfGenerationService.generateAndUploadRentalAgreementPDF(
-            bookingId
+            leaseId
           );
 
         return {
           success: true,
           message: 'Rental agreement PDF generated and retrieved successfully',
           data: {
-            bookingId: bookingId,
+            bookingId: leaseId,
             status: booking.status,
             property: {
               id: booking.property.id,
@@ -804,7 +819,7 @@ class BookingsService {
     // Get rental agreement PDF info
     try {
       const pdfResult =
-        await pdfGenerationService.getRentalAgreementPDF(bookingId);
+        await pdfGenerationService.getRentalAgreementPDF(booking.Id);
 
       // Determine if this is a local file or Cloudinary URL
       const isLocal =
@@ -844,7 +859,7 @@ class BookingsService {
         );
         const pdfResult =
           await pdfGenerationService.generateAndUploadRentalAgreementPDF(
-            bookingId
+            booking.id
           );
 
         // Check if newly generated PDF is local or Cloudinary

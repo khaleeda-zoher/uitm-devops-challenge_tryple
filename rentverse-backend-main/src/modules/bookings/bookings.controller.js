@@ -1,4 +1,5 @@
 const bookingsService = require('./bookings.service');
+const { getRentalAgreementPDF } = require('./bookings.service');
 const { validationResult } = require('express-validator');
 
 class BookingsController {
@@ -300,14 +301,14 @@ class BookingsController {
   /**
    * Get rental agreement PDF for a booking
    */
+
   async getRentalAgreementPDF(req, res) {
     try {
-      const { id } = req.params; // Changed from bookingId to id
+      console.log('Authenticated user:', req.user);
+      const { id: bookingId } = req.params; // Changed from bookingId to id
+      const userId = req.user.id;
 
-      const result = await bookingsService.getRentalAgreementPDF(
-        id, // Use id instead of bookingId
-        req.user.id
-      );
+      const result = await bookingsService.getRentalAgreementPDF(bookingId,userId);
 
       res.json(result);
     } catch (error) {

@@ -200,6 +200,10 @@ const usePropertiesStore = create<PropertiesStore>((set, get) => ({
       console.log('Properties API response:', result)
       console.log('Map data from API:', result.data?.maps)
 
+      console.log('RAW API result:', result)
+      console.log('result.data:', result.data)
+    console.log('result.data.properties:', result.data?.properties)
+
       if (result.success) {
         set({
           properties: result.data.properties,
