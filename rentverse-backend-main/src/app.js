@@ -3,13 +3,29 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const swaggerUi = require('swagger-ui-express');
-
+//const swaggerUi = require('swagger-ui-express');
 const { connectDB } = require('./config/database');
-const swaggerSpecs = require('./config/swagger');
+//const swaggerSpecs = require('./config/swagger');
 const sessionMiddleware = require('./middleware/session');
-
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const authRoutes = require('./routes/auth'); // adjust path if needed
+
+const securityRoutes = require('./routes/security.js');
+const alertsRouter = require('./routes/alerts');
+const anomalyRoutes = require('./routes/anomaly');
+
+app.use('/api/security', securityRoutes);
+app.use('/api/alerts', alertsRouter);
+app.use('/api/anomaly', anomalyRoutes);
+
+
+
+
+
 
 // Ngrok and proxy handling middleware
 app.use((req, res, next) => {
@@ -152,7 +168,7 @@ app.use(
 );
 
 // Swagger UI setup
-app.use(
+/*app.use(
   '/docs',
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpecs, {
@@ -188,10 +204,10 @@ app.use(
       ],
     },
   })
-);
+);*/
 
 // Import routes
-const authRoutes = require('./routes/auth');
+//const authRoutes = require('./routes/auth');
 const uploadRoutes = require('./routes/upload');
 const userRoutes = require('./modules/users/users.routes');
 const propertyRoutes = require('./modules/properties/properties.routes');
