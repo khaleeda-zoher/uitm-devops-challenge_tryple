@@ -43,13 +43,20 @@ A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Chall
 
 ## 🔑 Core Modules Implemented
 
-🔗 Secure Authentication: MFA logins were implemented with role-based access control. 
+<div align="center">
 
-🔗 Secure API Gateway: Communication was secured using HTTPS and JWT tokens.
+### **Core Development Modules**
 
-🔗 Digital Agreement: A mobile module for digital signatures was created with workflow validation.
+| <p align="center">Module<p/> | <p align="center">Description<p/> | 
+| :--- | :--- | :--- | :--- |
+| **1. Secure Login & MFA** | <br/>MFA/OTP-based login was created with role-based access control | Access was restricted to verified identities during critical actions.<br/> | 
+| **2. Secure API Gateway** | <br/>HTTPS, JWT tokens, and access validation were applied. | Secure communication was maintained according to OWASP M1-M3 and M5-M6.<br/> | 
+| **3. Digital Agreement** | <br/>The Rentverse module was reused with added secure signature validation. | Data integrity and workflow validation were enforced through access permissions.<br/> | 
+| **4. Smart Notification** | <br/>A system for alerts and notifications was implemented for critical events | Real-time visibility was provided for system security alerts.<br/> | 
+| **5. Activity Log Dashboard** | <br/>User activities were logged to detect suspicious patterns and failed logins. | Threat visualization and incident detection were enabled for admin accountability.<br/> | 
+| **6. CI/CD Security Testing** | <br/>GitHub Actions were integrated for automated static code analysis (SAST). | Vulnerability scans were conducted prior to each deployment.<br/> | 
 
-🔗 DevSecOps Monitoring: Real-time logging of user activities and failed login attempts was established for threat visualization.
+</div>
 
 ## 🛠️ Security Feature
 
