@@ -24,13 +24,13 @@ back-end integrity, and AI-driven defense mechanisms were blended to create a re
 
 ## 🔑 Core Modules Implemented
 
-### 🔗 Secure Authentication: MFA logins were implemented with role-based access control. 
+🔗 Secure Authentication: MFA logins were implemented with role-based access control. 
 
-### 🔗 Secure API Gateway: Communication was secured using HTTPS and JWT tokens.
+🔗 Secure API Gateway: Communication was secured using HTTPS and JWT tokens.
 
-### 🔗 Digital Agreement: A mobile module for digital signatures was created with workflow validation.
+🔗 Digital Agreement: A mobile module for digital signatures was created with workflow validation.
 
-### 🔗 DevSecOps Monitoring: Real-time logging of user activities and failed login attempts was established for threat visualization.
+🔗 DevSecOps Monitoring: Real-time logging of user activities and failed login attempts was established for threat visualization.
 
 ## 🛠️ Security Feature
 
