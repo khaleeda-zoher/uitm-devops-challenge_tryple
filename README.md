@@ -1,9 +1,20 @@
 # 📦 UiTM Mobile SecOps Challenge - Tryple Team
 
+This mobile prototype was developed as a requirement for the UiTM Mobile SecOps 21 Days Challenge. A secure, intelligent application was built 
+by blending front-end usability with back-end integrity based on the Rentverse architecture. Real-world DevSecOps environments were simulated to 
+demonstrate secure software engineering across the full stack.
+
+The system was designed to foster a DevSecOps mindset, with a specific focus on Mobile Defense and Intelligence. Advanced security mechanisms, 
+including JWT-based authentication and role-based access control, were integrated to ensure data protection and session integrity. Additionally, 
+a rule-based Threat Intelligence System was incorporated to detect unusual access patterns and mitigate potential intrusion attempts.
+
 Our group members:
-1. Khaleeda binti Mohamad Zoher 
-2. Siti Aisyah binti Idris
-3. Nur Arief Danial bin Zorkarnain
+
+1. Khaleeda binti Mohamad Zoher
+   
+3. Siti Aisyah binti Idris
+   
+5. Nur Arief Danial bin Zorkarnain
 
 ## 🧪 Project Overview
 
@@ -13,13 +24,13 @@ back-end integrity, and AI-driven defense mechanisms were blended to create a re
 
 ## 🔑 Core Modules Implemented
 
-🔗 ###Secure Authentication###: MFA logins were implemented with role-based access control. 
+### 🔗 Secure Authentication: MFA logins were implemented with role-based access control. 
 
-🔗 ###Secure API Gateway###: Communication was secured using HTTPS and JWT tokens.
+### 🔗 Secure API Gateway: Communication was secured using HTTPS and JWT tokens.
 
-🔗 ###Digital Agreement###: A mobile module for digital signatures was created with workflow validation.
+### 🔗 Digital Agreement: A mobile module for digital signatures was created with workflow validation.
 
-🔗 ###DevSecOps Monitoring###: Real-time logging of user activities and failed login attempts was established for threat visualization.
+### 🔗 DevSecOps Monitoring: Real-time logging of user activities and failed login attempts was established for threat visualization.
 
 ## 🛠️ Security Feature
 
