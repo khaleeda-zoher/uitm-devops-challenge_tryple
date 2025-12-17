@@ -1,22 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rentverse_mobile_admin/features/security/ui/admin_main_dashboard.dart';
-//import 'package:rentverse_mobile_admin/features/security/ui/anomaly_alert_screen.dart';
-//import 'features/security/ui/activity_log_screen.dart';
+import 'package:provider/provider.dart';
+
+import 'pages/home_page.dart';
+import 'features/properties/logic/property_provider.dart';
+import 'features/properties/data/property_repository.dart';
+import 'providers/search_box_provider.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => PropertyProvider(
+            PropertyRepository(
+              baseUrl: 'http://localhost:3000/api',
+            ),
+          ),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SearchBoxProvider(),
+        ),
+      ],
+      child: const RentVerseApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class RentVerseApp extends StatelessWidget {
+  const RentVerseApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: AlertScreen(),
-      home: AdminDashboardScreen(),
+      title: 'RentVerse',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        useMaterial3: true,
+      ),
+      home: const HomePage(), // HomePage is now the first screen
     );
   }
 }

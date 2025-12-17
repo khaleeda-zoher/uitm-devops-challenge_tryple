@@ -51,6 +51,11 @@ dev_dependencies:
   provider: ^6.0.5        # State management (or GetX / Riverpod)
   intl: ^0.18.0           # Formatting dates, numbers
   fluttertoast: ^8.2.1    # Show messages/toasts
+  flutter_map: 8.2.2
+  latlong2: ^0.9.1
+  pdf: ^3.11.0
+  printing: ^5.11.0
+  syncfusion_flutter_pdfviewer: ^32.1.19
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
