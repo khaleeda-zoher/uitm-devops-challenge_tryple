@@ -7,8 +7,8 @@ Our group members:
 
 # 🧪 Project Overview
 
-A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were integrated into the Rentverse architecture to simulate real-world defensive environments. 
-Front-end usability, back-end integrity, and AI-driven defense mechanisms were blended to create a resilient system.
+A secure mobile prototype was developed for the UiTM Mobile SecOps 21 Days Challenge. DevSecOps principles were integrated into the Rentverse architecture 
+to simulate real-world defensive environments. Front-end usability, back-end integrity, and AI-driven defense mechanisms were blended to create a resilient system.
 
 # 🔑 Core Modules Implemented
 
