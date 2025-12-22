@@ -94,47 +94,47 @@ a defined window, the activity is flagged as a potential threat.
 ## 📩 How To Use Instructions 
 
 ### 1. Initial Setup: Environment & VS Code 
-<br/>
+
 Since the project is provided as a zip file, it must be extracted and configured correctly 
 within your IDE.
-<br/>
+
 * **Extract the Zip File**: Extract the uitm-devops-challenge_tryple.zip to a dedicated 
 folder on your desktop.
-<br/> 
+
 * **Open in VS Code**:
 - Launch **VS Code**.
 - Go to File > Open Folder... and select the extracted project folder.
-<br/>
+  
 * **Install Required Extensions**:
 - Open the **Extensions** view (Ctrl+Shift+X) and install the following: 
 - **Flutter** (This also installs **Dart**).
 - **ESLint** (for backend code quality).
 - **Prisma** (for database schema viewing).
-<br/>
+
 ### 2. Backend & Database Setup 
 The backend must be running for the mobile app to communicate with the database. 
-<br/>
+
 * **Install Node.js Dependencies**:
 - Open the integrated terminal in VS Code.
 - Navigate to the backend directory:
 - ***cd rentverse-backend-main***.
 - Run ***npm install*** to download all necessary packages.
-<br/>
+
 * **Configure Database**:
 - Open the ***.env*** file in the backend folder.
 - Ensure your DATABASE_URL matches your local PostgreSQL credentials (e.g., 
 postgresql://postgres:password@localhost:5432/rentverse_db).
-<br/>
+
 * **Sync Schema & Seed Data**: 
 - Run ***npx prisma migrate dev*** to create the tables.
 - Run ***pnpm db:seed*** (or ***node prisma/seed.js***) to populate the database with 
 the Admin, Owner, and Tenant test accounts.
-<br/>
+
 * **Start Backend**:
 - Run ***npm start*** or ***npm run dev***.
 - The terminal should display:         
 Server running at http://0.0.0.0:3000.
-<br/>
+
 ### 3. Mobile App Setup (Android Emulator) 
 The mobile app requires **Android Studio** to provide the emulator environment. 
 * **Configure Android Studio**:
@@ -145,24 +145,24 @@ The mobile app requires **Android Studio** to provide the emulator environment.
 * **Run the Mobile App**:
 - Ensure the emulator is detected in the bottom-right corner of VS Code.
 - Press **F5** or run flutter run in the terminal.
-<br/>
+
 * **4. How to Use the App (Role-Based Testing)** 
 Once the app is running on the emulator, test the following pages using the credentials 
 seeded earlier:
-<br/>
+
 **A. Tenant Role (Primary User)**
 - **Login**: Enter tenant credentials and verify the **MFA/OTP** screen.
 - **Function**: Browse the property list, view details (price, location), and submit a rental 
 request.
 - **Action**: Sign the **Digital Rental Agreement** on the mobile screen to test data 
 integrity.
-<br/>
+
 **B. Owner Role (Property Manager)**
 - **Login**: Re-login using owner credentials. 
 - **Function**: Navigate to the "Manage Listings" page.
 - **Action**: Use the Upload Property feature to add a new house listing with images and 
 descriptions.
-<br/>
+
 **C. Admin Role (Security & Monitoring)**
   - **Login**: Login as an admin to access restricted security features.
   - **Function**: View the Activity Log Dashboard to see recent login attempts.
