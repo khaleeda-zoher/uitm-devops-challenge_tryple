@@ -92,7 +92,7 @@ a defined window, the activity is flagged as a potential threat.
 🔗 Security: JWT, Bcrypt hashing, and MFA/OTP verification.
 
 ## 📩 How To Use Instructions 
-<div align="justify">
+
 ### 1. Initial Setup: Environment & VS Code 
 Since the project is provided as a zip file, it must be extracted and configured correctly 
 within your IDE. 
@@ -128,5 +128,5 @@ integrity.
 descriptions. 
 **C. Admin Role (Security & Monitoring)** - **Login**: Login as an admin to access restricted security features. - **Function**: View the Activity Log Dashboard to see recent login attempts. - **Security Check**: Intentionally fail a login attempt 5 times. Access the **Anomaly 
 Alert** screen to see if the **AI-based monitoring** flags the suspicious behavior.
-</div>
+
 
