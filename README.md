@@ -146,7 +146,7 @@ The mobile app requires **Android Studio** to provide the emulator environment.
 - Ensure the emulator is detected in the bottom-right corner of VS Code.
 - Press **F5** or run flutter run in the terminal.
 
-* **4. How to Use the App (Role-Based Testing)** 
+### 4. How to Use the App (Role-Based Testing)
 Once the app is running on the emulator, test the following pages using the credentials 
 seeded earlier:
 
